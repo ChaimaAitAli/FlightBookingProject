@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Palatino Linotype", "Book Antiqua";
+
+}
+
+.container{
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    
+    
+}
+.container1{
+
+    background-color: #0880ff;
+    text-align: center;
+    padding: 40px 90px;
+    color: rgb(251, 251, 252);
+    position: relative;
+    border-radius: 20px;
+}
+
+h3{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.input-container {
+    position: relative;
+    width: 300px; 
+    margin: 20px;
+}
+
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-out;
+}
+
+.button1{
+
+    cursor: pointer;
+    justify-content: center;
+    background-color: white;
+    color :#0880ff;
+    border: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+}
+.button1:hover{
+        box-shadow: 2px 3px rgb(142, 142, 176) ;
+        color: rgb(120, 120, 148);
+}
+h6{
+    position: relative;
+    top:-55px;
+    left:-75px;
+    color: rgb(0, 0, 0);
+}
+h6:hover{
+    cursor: pointer;
+
+}

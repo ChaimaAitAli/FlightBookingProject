@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px; 
+    width: 100%;
+   
+
+}
+
+.left-container{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right-container{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form{
+    margin: 5px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-out;
+}
+
+h2 , h6 , h1 , .submit-button{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    letter-spacing: 1.4px;
+    word-spacing: 4.2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+.qst{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
+}
+.log{
+    color: rgb(2, 2, 174);
+    cursor: pointer;
+}
+.submit-button{
+
+    cursor: pointer;
+    justify-content: center;
+    background-color: #0880ff;
+    color :white;
+    border: none;
+    height: 40px;
+    width:100%;
+    margin: 5px;
+
+    border-radius: 30px;
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.submit-button:hover{
+    box-shadow: 2px 3px rgb(142, 142, 176) ;
+    color: rgb(0, 0, 0);
+}
