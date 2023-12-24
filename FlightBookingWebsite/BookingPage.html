@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/O.jpg" type="image/x-icon">
+    <link rel="icon" href="ImageFonts/avion2.png" type="image/x-icon">
 
     <link rel="stylesheet" href="BookingPage.css">
     <title>Travelo</title>
@@ -13,7 +13,6 @@
         <ul>
         <li>
             <ul class="logo">
-                <li><img src="images/O.jpg" alt="O" width="35px" height="35px" margin="10px"></li>
                 <li class="bitra">Travelo</li>
             </ul>
         </li>
@@ -29,14 +28,58 @@
             </ul>
         </li>
             <ul class="Sign">
-                <li><a href="www.home.com" style="color:#332B46;"><strong>Register</strong></a></li>
+                <li><a href="www.home.com" style="color:#332B46;"><strong>Login</strong></a></li>
                 <li style="color: grey; size: 150;">/</li>
-                <li><a href="www.home.com" style="color:#FFA775;"><strong>Sign in </strong></a></li>
+                <li><a href="www.home.com" style="color:#276AFD;"><strong>Sign in </strong></a></li>
 
 
             </ul>
         </ul>
     </div>
+    
+    <content>
+    <img class="halfMap" src="ImageFonts/HalfMap.png">
+    <h2 class="Find">Find your trip</h2>
+    <button class="FlightType"><img id="White1" class="hidden" src="ImageFonts/RoundWhite.png" height="25px" width="23px" style="margin: 0 10px 0 -5px;"><img id="Grey1" src="ImageFonts/Round3.png" height="25px" width="23px" style="margin: 0 10px 0 -5px;">Round</button>
+    <button class="FlightType1"><img id="White2" class="hidden" src="ImageFonts/straightFlecheBlanc.png" height="10px" width="27px" style="margin-right: 7px;"><img id="Grey2" src="ImageFonts/GreyArrow.png" height="10px" width="27px" style="margin-right: 7px;">One way</button>
+    
+    <div class="search-form">
+        <div class="from">from</div>
+        <input type="text" class="from-input" placeholder="Country or city" required>
+        <hr class="separator1">
+        <div class="to">to</div>
+        <input type="text" class="to-input" placeholder="Country or city" required>
+        <button class="RefreshButton"><img class="refresh" src="ImageFonts/refresh-button_7022719.png" height="35px" width="35px"></button>
+        <div class="DepartureDate">
+            <p class="Departure">Departure</p>
+                <div class="input_container">
+                <input type="date" class="departure_input" placeholder="Departure Date">
+            </div>
+            </div>
+
+        <div class="ReturnDate">
+                <p class="Departure">Return</p>
+                    <div class="input_container">
+                    <input type="date" class="departure_input" placeholder="Departure Date">
+            </div>
+            </div>
+       <ul id="allPassengers" class="ListPassengers">
+        <li class="passenger"><button id="male1"><img class="passengerImage" src="ImageFonts/male2.png"></button></li>
+        <li class="passenger"><button id="male2" class="male hidden"><img class="passengerImage" src="ImageFonts/male11.png"></button></li>
+        <li class="passenger"><button id="male3" class="male hidden"><img class="passengerImage" src="ImageFonts/male3.png"></button></li>
+        <li class="passenger"><button id="male4" class="male hidden"><img class="passengerImage" src="ImageFonts/male4.png"></button></li>
+        <li class="passenger"><button id="female1" class="female hidden"><img class="passengerImage" src="ImageFonts/female1.png"></button></li>
+        <li class="passenger"><button id="female2" class="female hidden"><img class="passengerImage" src="ImageFonts/female2.png"></button></li>
+        <li class="passenger"><button id="female3" class="female hidden"><img class="passengerImage" src="ImageFonts/female3.png"></button></li>
+        <li class="passenger"><button id="female4" class="female hidden"><img class="passengerImage" src="ImageFonts/female4.png"></button></li>
+        <li class="passenger"><button id="female5" class="female hidden"><img class="passengerImage" src="ImageFonts/female5.png"></button></li>
+        <li class="passenger"><button id="female6" class="female hidden"><img class="passengerImage" src="ImageFonts/female6.png"></button></li>
+
+        <li id="plusSign" class="passenger"><button id="plusButton"><img class="plusImage" src="ImageFonts/plusSign.png" height="30px" width="30px"></button></li>
+       </ul> 
+
+    </div>
+    </content>
 <script src="BookingPage.js"></script>
 </body>
 </html>
