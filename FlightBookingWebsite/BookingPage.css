@@ -10,6 +10,48 @@
     font-family: Tommy;
     src: url(ImageFonts/MADE\ Tommy\ Soft\ Light\ PERSONAL\ USE.otf);
 }
+@keyframes slideFromRight {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 45%; 
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-70%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-in {
+    animation: floatIn 0.8s ease-out;
+}
 button{
     cursor: pointer;
     background-color: transparent;
@@ -62,11 +104,15 @@ li {
     text-decoration: none;
     text-align: center;
     font-family:Outfit;
+    font-size: 17px;
     color: #332B46;
     transition: background-color 0.3s ease, color 0.3s ease;
+    height: 10px;
+    border-radius:40px;
 }
 .menu a:hover {
     background-color: #276AFD;
+    transition:background-color 0.3s ease, color 0.3s ease;
     color: white;
 }
 .Sign li{
@@ -74,6 +120,7 @@ li {
     display: block;
     text-decoration: none;
     font-family: Outfit;
+    font-size: 18px;
     padding: 10px;
     padding-top: 18px;
     margin-right: 0px;
@@ -102,18 +149,20 @@ li {
 .halfMap{
     position: absolute;
     z-index: -1;
-    top:-21%;
-    left: 45%;
+    top: -21%;
+    left: 100%; 
+    animation: slideFromRight 1.5s ease-out forwards;
 }
 
 .Find{
     position: absolute;
     top: 90px;
-    left: 60px;
+    left: 65px;
     color: black;
     font-family: Outfit;
     font-size: 40px;
     font-weight: 600;
+    animation: slideInFromLeft 0.8s ease-out;
 }
 
 .FlightType{
@@ -126,8 +175,8 @@ li {
     background-color: white;
     border-radius: 20px;
     border-color: white;
-    top: 200px;
-    left: 60px;
+    top: 195px;
+    left: 65px;
     font-size: 16px;
     margin-right: 10px;
     border: none;
@@ -136,6 +185,7 @@ li {
     align-items: center; 
     justify-content: center;
     cursor: pointer;
+    animation: zoomIn 0.8s ease-out;
 }
 
 .FlightType1{
@@ -148,12 +198,13 @@ li {
     background-color: white;
     border-radius: 20px;
     border-color: white;
-    top: 200px;
-    left: 190px;
+    top: 195px;
+    left: 205px;
     font-size: 16px;
     margin-right: 50px;
     border: none;
     cursor: pointer;
+    animation: zoomIn 0.8s ease-out;
 }
 .FlightType:hover{
     background-color: #276AFD;
@@ -174,16 +225,21 @@ border-bottom: 5px solid transparent;
 border-left: 10px solid grey;
 }
 
-.search-form{
-    position: absolute;
-    left:60px;
-    top:270px;
+.from-to{
     background-color: white;
-    height:170px;
-    width:580px;
+    height:180px;
+    width:590px;
     border-radius: 25px;
     border-color: white;
     padding: 20px;
+    animation: zoomIn 0.8s ease-out;
+}
+
+.search-form{
+    position: absolute;
+    left:60px;
+    top:260px;
+    background-color: transparent;
 }
 .from{
     color:#276AFD;
@@ -212,7 +268,7 @@ border-left: 10px solid grey;
     border: none;
     color:black;
     font-family: Outfit;
-    font-size: 30px;
+    font-size: 50px;
     font-size: 400;
 }
 
@@ -245,35 +301,37 @@ border-left: 10px solid grey;
 }
 .refresh{
     position: absolute;
-    top:89px;
+    top:90px;
     left:580px;
 }
 
 .refresh:hover{
-    height:37px;
-    width:37px;
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
 }
 
 .DepartureDate{
     position: absolute;
-    top:225px;
-    left:7px;
+    top:240px;
+    left:5px;
     height:90px;
     width:230px;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 35px;
     border-color: white;
+    animation: zoomIn 0.8s ease-out;
 }
 
 .ReturnDate{
     position: absolute;
-    top:225px;
-    left:260px;
+    top:240px;
+    left:250px;
     height:90px;
     width:230px;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 35px;
     border-color: white;
+    animation: zoomIn 0.8s ease-out;
 }
 
 .Departure{
@@ -316,17 +374,18 @@ border-left: 10px solid grey;
 }
 
 .departure_input::-webkit-calendar-picker-indicator:hover{
-    width: 57px;
-    height: 57px;
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
 }
 
 .ListPassengers {
     position: absolute;
-    top: 155%;
-    left:2%;
+    top: 160%;
+    left:1%;
     list-style: none; 
     padding: 0;
     margin: 0; 
+    animation: zoomIn 0.8s ease-out;
 }
 
 .passenger {
@@ -344,10 +403,7 @@ border-left: 10px solid grey;
 .passengerImage:hover{
     background-color: #c0cde6;
 }
-.plusImage:hover{
-    height: 33px;
-    width: 33px;
-}
+
 #plusSign{
     background-color: white;
     border-radius: 50%;
@@ -357,6 +413,207 @@ border-left: 10px solid grey;
     justify-content: center;
     align-items: center;
 }
-.male{}
-.female{}
 
+#plusButton:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+.passenger_info{
+    position: absolute;
+    background-color: white;
+    border-radius: 25px;
+    height: 200px;
+    width: 520px;
+    top:210%;
+    left:1%;
+    animation: zoomIn 0.8s ease-out;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+  margin-left:20px;
+}
+
+.form__field {
+  font-family: Outfit;
+  width: 50%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  font-family: Outfit;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  font-family: Outfit;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    font-family: Outfit;
+    color: #276AFD;
+    font-weight:700;    
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #5b84dd,#276AFD);
+    border-image-slice: 1;
+}
+}
+
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+body {
+  font-family: Outfit; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+.family{
+position: absolute;
+top:0%;
+left:30%;
+}
+
+.age{
+    position: absolute;
+    top:50%;
+    left:00%;
+}
+.nationality{
+    position: absolute;
+    top:50%;
+    left:30%;
+}
+.num_pass{
+    position: absolute;
+    top:50%;
+    left:60%;
+}
+.male_circle{
+    position: absolute;
+    top:11%;
+    left:65%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #dee0e6;
+    color:black;
+    font-family: Outfit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26.5px;
+    cursor: pointer;
+}
+.female_circle{
+    position: absolute;
+    top:11%;
+    left:79%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #dee0e6;
+    color:black;
+    font-family: Outfit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27.5px;
+    cursor: pointer;
+}
+.female_circle:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+.male_circle:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+}
+.SearchButton {
+    position: absolute;
+    top: 265%;
+    left: 160%;
+    width: 170px;
+    height: 70px;
+    background-color: #276AFD;
+    color: white;
+    font-family: Outfit;
+    border-radius: 40px;
+    outline: none;
+    font-size: 25px;
+    animation: zoomIn 0.8s ease-out;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.SearchButton:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1); 
+}
+
+
+.SearchButton.hidden {
+    display: none;
+}
+
+
+.SearchButton.appear {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fin{
+    position:absolute;
+    top:310%;
+    left:80%;
+}
+.Travelo_fin{
+    position: absolute;
+    font-family: Outfit;
+    color:black;
+    font-size: 40px;
+    font-weight: 600;
+}
