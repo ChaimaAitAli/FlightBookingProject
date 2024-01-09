@@ -2,14 +2,6 @@
     font-family: Outfit;
     src: url(ImageFonts/Outfit-VariableFont_wght.ttf);
 }
-@font-face {
-    font-family: Ananda;
-    src: url(ImageFonts/Ananda_Personal_Use.ttf);
-}
-@font-face {
-    font-family: Tommy;
-    src: url(ImageFonts/MADE\ Tommy\ Soft\ Light\ PERSONAL\ USE.otf);
-}
 @keyframes slideFromRight {
     from {
         left: 100%;
@@ -126,9 +118,14 @@ li {
     margin-right: 0px;
     float:right;
 }
+.Sign li:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
 .Sign a{
     text-decoration: none;
 }
+
 .bitra {
     font-family: Outfit;
     font-size: 40px;
