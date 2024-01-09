@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In </title>
     <link rel="stylesheet" href="signin.css">
+    <script href="signin.js"></script>
 </head>
 <body>
     <div class="main">
@@ -16,17 +17,17 @@
             Dream Vacation
             </h1>
         </div>
-        <div class="right-container">
+        <div class="right-container" id="container">
             <h2>SIGN IN HERE</h2>
-            <input type="text" class="form" placeholder="First Name" required>
-            <input type="text" class="form" placeholder="Last Name" required>
-            <input type="email" class="form" placeholder="Enter your Email" required>
-            <input type="password" class="form" placeholder="Enter a password" required>
-            <input type="password" class="form" placeholder="Confirm your password" required>
+            <input type="text" class="form" id="fname" placeholder="First Name" required>
+            <input type="text" class="form" id="lname" placeholder="Last Name" required>
+            <input type="email" class="form" id="mail" placeholder="Enter your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input type="password" class="form" id="psw1" placeholder="Enter a password" required>
+            <input type="password" class="form" id="psw2" placeholder="Confirm your password" required>
             <p class="qst">
                 Already a member ? <span class="log">Log in </span>
             </p>
-            <button class="submit-button">SIGN IN</button>
+            <button class="submit-button" id="submitbtn">SIGN IN</button>
         </div>
     </div>
 </body>

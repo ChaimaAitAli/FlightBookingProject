@@ -1,0 +1,32 @@
+<nav>
+    <div class="header">
+        <ul>
+        <li>
+            <ul class="logo">
+                <li class="bitra">Travelo</li>
+            </ul>
+        </li>
+
+        <li>
+            <ul class="menu">
+                <li><hr class="separator"></li>
+                <li><a href="/home"><strong>Home</strong></a></li>
+                <li><a href="www.news.com"><strong>Hotels</strong></a></li>
+                <li><a href="www.home.com"><strong>Car rentals</strong></a></li>
+                <li><a href="www.home.com"><strong>Attractions</strong></a></li>
+                <li><a href="www.home.com"><strong>Airport taxis</strong></a></li>
+            </ul>
+        </li>
+            <ul class="Sign">
+                {{#if user}}
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/" style="color:#332B46;"><strong>Login</strong></a></li>
+                <li style="color: grey; size: 150;">/</li>
+                <li><a href="/register" style="color:#276AFD;"><strong>Sign in </strong></a></li>
+                {{/if}}
+            </ul>
+        </ul>
+    </div>
+</nav>
