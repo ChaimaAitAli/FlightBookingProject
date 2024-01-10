@@ -1,0 +1,296 @@
+@font-face {
+    font-family: Outfit;
+    src: url(./images/Outfit-VariableFont_wght.ttf);
+}
+*{
+    font-family: Outfit;
+}
+.header{
+    background-color:#F5F6F9;
+    width: 100%;
+    height: 13%;
+    margin-top: 0px;
+    position: fixed;
+    z-index: 10000;
+    top: 0%;
+    padding-bottom: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li {
+    float: left
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 4px;
+    margin-left:0px;
+}
+.menu a {
+    display: block;
+    padding: 30px;
+    padding-top: 18px;
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 17px;
+    color: #332B46;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 10px;
+    border-radius:40px;
+}
+.menu a:hover {
+    background-color: #276AFD;
+    transition:background-color 0.3s ease, color 0.3s ease;
+    color: white;
+}
+
+.bitra {
+    font-family: Outfit;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.separator{
+    width: 1.5cm;
+    height: 5px;
+    background-color:#276AFD;
+    margin-top: 27px;
+    margin-left:1px;
+    margin-right: 2px;
+    border-color:#276AFD;
+    border: 1cap;
+    border-radius: 5px;
+}
+
+.Sign li{
+    margin-top: 0px;
+    display: block;
+    text-decoration: none;
+    font-family: Outfit;
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 18px;
+    margin-right: 15px;
+    float:right;
+}
+.Sign a{
+    text-decoration: none;
+}
+
+.ProfileIcon{
+    width:60px;
+    border-radius: 50% ;
+    cursor: pointer;
+    
+}
+
+.icon li {
+    position: absolute;
+    right: 0;
+    float:right;
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  
+div {
+    height: 100%;
+}
+
+body{
+    background-color: #F5F6F9;
+}
+  
+.left-half {
+    max-width: 600px;
+    margin-left: 50px;
+    align-items: center;
+    background-color: #F5F6F9;
+    position: fixed;
+    left: 0px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+    
+}
+  
+.right-half {
+    display: block;
+    align-items: center;
+    background-color: #F5F6F9;
+    position: fixed;
+    right: 0px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+@media screen and (max-width: 975px) {
+        .menu {
+            display: none; /* Cache la barre de menu lorsque la largeur de l'écran est de 800 pixels ou moins */
+        }
+        .icon {
+            display: none; /* Cache l'icône (image) lorsque la largeur de l'écran est de 800 pixels ou moins */
+        }
+        /* Styles additionnels pour ajuster l'apparence de la partie gauche (.left-half) si nécessaire */
+        .left-half {
+            max-width: 100%; /* Ajuste la largeur de .left-half pour occuper toute la largeur lorsque la barre de menu est cachée */
+        }
+        .right-half{
+            display: none;
+        }
+    }
+
+.list1{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.list1 button {
+    display: inline-block;
+    margin: 10px 0; 
+    border: none;
+    border-bottom: 1px solid #ccc; 
+    padding: 5px;
+    background: none;
+    cursor: pointer;
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.list1 button:hover{
+    background-color: #f5f3f3;
+}
+
+.sub-left-container{
+    position: absolute;
+    top:40%;
+    max-height: 300px;
+    margin-top : 20px;
+}
+.logout-btn a{
+    color:white;
+    text-decoration: none;
+}
+.logout-btn{ 
+    background-color: #276AFD;
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: Outfit;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+.logout-btn:hover{
+    background-color: #598bf8;
+}
+
+.Person{
+    position:absolute;
+    top:20%;
+    height: 80px;
+    width: 80px;
+}
+
+.list1 img{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle; 
+    margin-right: 10px;
+
+}
+p{
+    position: absolute;
+    top: 28%;
+    left: 31%;
+    font-size: 40px;
+    font-weight: 700;
+}
+h3{
+    width: 600px;
+    height: 30px;
+
+}
+.info{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.container1{
+    position: absolute;
+    top:35%;
+}
+.info li{
+    width: 500px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.delete-btn a{
+    color:white;
+
+}
+.delete-btn{
+    position: absolute;
+    top: 87%;
+    left:40%;
+    background-color: #276AFD;
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+.Account{
+    position: absolute;
+    top:15%;
+    left:40%;
+}
+.YourInfo{
+    position: absolute;
+    top:32%;
+    left: 18%;
+}
+.delete-btn{
+    color: white;
+    text-decoration: none;
+}
+.blue{
+    color: #276AFD;
+    font-family: Outfit;
+    font-weight: 900;
+}
+
+
+

@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="icon" href="/css/images/avion2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+{{> navbar}}
+
+    <section class="container">
+        <div class="left-half">
+
+    <img src="" class="Person" id="userImage">
+
+    <script>
+         document.addEventListener('DOMContentLoaded', function () {
+        var userGender = "{{user.GENDER}}";
+
+        var userImage = document.getElementById('userImage');
+
+        if (userGender === 'male') {
+            userImage.src = '/css/images/male11.png';
+        } else if (userGender === 'female') {
+            userImage.src = '/css/images/female2.png';
+        } 
+    });
+
+            <p style="font-family:Outfit;"> Hello {{user.NAME}} !</span>
+        
+            <div class="sub-left-container">
+                <div class="list1">
+                    <button class="list1"><img src="/css/images/passager.png" > Add passenger</button>
+                    <button class="list1"><img src="/css/images/reservation.png" >Your reservations</button>
+                    <button class="list1"><img src="/css/images/account.png"> Your account</button>
+                </div>
+                <button class="logout-btn"><a href="/auth/logout">Logout</a></button>
+            </div>
+        </div>
+        
+
+
+        <div class="right-half">
+            <p class="Account">Account</p>
+            <h3 class="YourInfo">Your information</h3>
+            <div class="container1">
+            <ul class="info">
+                <li class="info"><span class="blue">Identifiant  :</span>{{user.ID }}</li>
+                <li class="info"><span class="blue">Full Name  :</span>{{user.NAME}}</li>
+                <li class="info"><span class="blue">Phone number  :</span>{{user.PHONE}} </li>
+                <li class="info"><span class="blue">Email  :</span>{{user.EMAIL}}</li>
+            </ul>
+            </div>
+            <form action='/auth/delete-account' method="post">
+                <button class="delete-btn" type="submit">Delete your account</button>
+            </form>
+        </div>
+      </section>
+</body>
+</html>

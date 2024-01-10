@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/css/images/avion2.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/search.css">
+    <title>Flights</title>
+</head>
+<body>
+  <div class="header">
+        <ul>
+        <li>
+            <ul class="logo">
+                <li class="bitra">Travelo</li>
+            </ul>
+        </li>
+        <li>
+            <ul class="menu">
+                <li><hr class="separator"></li>
+                <li><a href="www.home.com"><strong>Home</strong></a></li>
+                <li><a href="www.news.com"><strong>Hotels</strong></a></li>
+                <li><a href="www.home.com"><strong>Car rentals</strong></a></li>
+                <li><a href="www.home.com"><strong>Attractions</strong></a></li>
+                <li><a href="www.home.com"><strong>Airport taxis</strong></a></li>
+            </ul>
+        </li>
+            <ul class="Sign">
+                {{#if user}}
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/" style="color:#332B46;"><strong>Login</strong></a></li>
+                <li style="color: grey; size: 150;">/</li>
+                <li><a href="/register" style="color:#276AFD;"><strong>Sign in </strong></a></li>
+                {{/if}}
+            </ul>
+        </ul>
+    </div>
+    
+
+<div class="content">
+{{#if flights}}
+  {{#each flights}}
+    <div id="F1" class="Flight">
+      <div class="departure">{{airportdepart}}</div>
+      <div class="departureTime">{{hourDepart}}</div>
+      <div class="arrival">{{airportArrival}}</div>
+      <div class="arrivalTime">{{hourArrival}}</div>
+      <div class="duration">{{duration}}</div>
+      <img class="fromto" src="/css/images/fromto.png" width="350px">
+      <hr class="separator1">
+      <div class="price">{{price}}"MAD"</div>
+      <div class="Company">{{company}}</div>
+      <button class="Flight_Info">Book Flight</button>
+    </div>
+  {{/each}}
+  {{else}} <p>no flights found</p>
+{{/if}}
+
+<img class="airplane hidden" src="/css/images/aiplane233.png" height="1700px" width="1800px">
+{{#each seatsResults}}
+    <button id="{{seat}}" class="seat {{state}} hidden">{{seat}}</button>
+{{/each}}
+        <button class="reserveButton hidden">Reserve Seat</button>
+    </div>
+
+    <div class="blue_box hidden">
+        <p class="Reserve_Your_Seats">Reserve Your Seats</p>
+        <p class="Reservation hidden">Reservation completed</p>
+        <div class="arrow hidden">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>    
+    </div>
+    <div class="success-checkmark">
+        <div class="check-icon hidden">
+          <span class="icon-line line-tip"></span>
+          <span class="icon-line line-long"></span>
+          <div class="icon-circle"></div>
+          <div class="icon-fix"></div>
+        </div>
+      </div>
+    <div class="tickets">
+    <div id="ticket1" class="ticket hidden">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="AiroportDepart">{{airportdepart}}</div>
+        <div class="heureDepart">{{hourDepart}}</div>
+        <div class="AiroportArrivee">{{airportArrival}}</div>
+        <div class="heureArrivee">{{hourArrival}}</div>
+        <img class="bentArrow" src="/css/images/bentArrow.png" height="110px" width="60px">
+        <hr class="line">
+        <div class="Flight_duration">Flight duration:</div>
+        <div class="time">{{duration}}</div>
+        <img class="qrCode" src="/css/images/qr_code2.jpg" height="150px" width="150px">
+    </div>
+    <div id="ticket2" class="ticket hidden">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+    <div id="ticket3" class="ticket hidden">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+    <div id="ticket4" class="ticket hidden">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+</body>
+</html>
